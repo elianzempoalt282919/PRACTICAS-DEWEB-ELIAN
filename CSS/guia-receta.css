@@ -1,0 +1,152 @@
+/*prueba*/
+
+/* Hoja de estilo receta */
+
+body {
+    background-color: beige;
+    font-family: "Montserrat", sans-serif;
+    margin: 50px;
+    color: #333; 
+}
+
+
+header h1 {
+    text-align: center;
+    font-size: 3em;
+    font-weight: 600;
+    padding: 16px;
+}
+
+h2 {
+    text-align: left; 
+    font-size: 2em;
+    font-weight: 500;
+    padding: 16px 16px 8px 16px;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 16px;
+    padding: 16px 16px 8px 16px;
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;          
+    padding: 16px;
+}
+
+.ingrediente-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+
+.ingrediente-item:hover {
+    transform: translateX(8px);
+}
+
+.items {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 16px;
+    flex-shrink: 0;
+}
+
+.text strong {
+    font-size: 1.1em;
+    text-align: left;
+}
+
+
+.lista-pasos {
+    padding-left: 40px;
+    margin-bottom: 20px;
+}
+
+.lista-pasos li {
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    padding: 6px;
+}
+
+
+.lista-pasos li:nth-child(even) {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+
+.galeria-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 16px;
+}
+
+.items1 { 
+    width: calc(16.66% - 14px); 
+    height: 120px;
+    object-fit: cover;
+    border-radius: 16px;
+    flex-shrink: 0; 
+}
+
+
+#seccion-video {
+    margin-top: 30px;
+}
+
+iframe[src*="youtube"] {
+    display: block;
+    margin: 0 auto;          
+    max-width: 100%;
+    border-radius: 20px;     
+    overflow: hidden;        
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15); 
+}
+
+footer {
+    text-align: center;
+    padding: 24px;
+    margin-top: 40px;
+    border-top: 1px solid #ccc;
+    font-weight: 500;
+}
+
+/* --- Diseños Breakpoints --- */
+
+@media only screen and (min-width: 768px) {
+    .container { 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .items1 {
+        width: calc(33.33% - 12px); 
+    }
+}
+
+@media only screen and (min-width: 1380px) {
+    body {
+        max-width: 1200px;
+        margin: 40px auto;
+    }
+    
+    .container { 
+        grid-template-columns: repeat(3, 1fr); 
+    }
+
+    .items1 {
+        width: calc(16.66% - 14px); 
+    }
+}
